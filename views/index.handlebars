@@ -1,0 +1,46 @@
+<main class="page landing-page">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/img/homepage.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/img/homepage.jpg" alt="First slide">
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center"><strong><i>Welcome to Webay</i></strong></h2>
+            <p class="text-center">Please Choose Your Desire Product</p>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            {{#each products}}
+            <div class="col-md-4 text-center">
+                <img class="rounded img-thumbnail" src="{{img}}">
+                <h5 style="margin-top:20px">{{ product_name}}</h5>
+                <p class="text-center">${{price}}</p>
+                <a class="addToCartHome" href="cart/{{id}}">Add to Cart</a>
+
+            </div>
+            {{/each}}
+
+
+        </div>
+
+
+</main>
+</div>
